@@ -12,6 +12,10 @@ namespace nnsMobile1
         public MainPage()
         {
             InitializeComponent();
+
+            img_mail.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
+            img_point.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
+            img_shopping.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
         }
     }
 }

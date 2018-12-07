@@ -11,5 +11,16 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.10.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\btn_mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\btn_mail.png" />
   </ItemGroup>
 </Project>
