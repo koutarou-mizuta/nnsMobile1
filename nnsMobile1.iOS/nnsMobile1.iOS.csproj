@@ -168,7 +168,7 @@
     <BundleResource Include="Resources\icon_loader_f_ww_01_s1.gif" />
     <BundleResource Include="Resources\splash_logo.png" />
     <BundleResource Include="Resources\btn_mail.png" />
-    <BundleResource Include="Resources\0000000001.jpg" />
+    <BundleResource Include="Resources\barcode..jpg" />
     <BundleResource Include="Resources\btn_point.png" />
     <BundleResource Include="Resources\btn_Shopping.png" />
     <BundleResource Include="Resources\btn_Shop.png" />
