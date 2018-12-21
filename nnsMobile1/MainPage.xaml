@@ -20,71 +20,72 @@
                     HorizontalOptions="Center" FontSize="Large"/>
             </Grid>
             
-        
-        
-        
- 
-
-
-
-
             <Label x:Name="lblKmfCd" Text="会員番号：0000000000"
                     VerticalOptions="Center"
                     HorizontalOptions="Center" FontSize="Medium" Margin="0,20,0,4"/>
 
-            <Image x:Name="imgBarCode" 
+            <Image x:Name="imgBarCode" Source="0000000001.jpg" 
                 WidthRequest="200" HeightRequest="60" Margin="0,0,0,20"/>
 
             <Button x:Name="btnToRegist" Text="登録はこちら" TextColor="White" HeightRequest="56"
                 BackgroundColor="DarkBlue" 
                 BorderRadius="20" Margin="6">
-                <!--<Button.Image>
-                    <OnPlatform x:TypeArguments="FileImageSource"
-                        iOS="ic_action_good.png"
-                        Android="btn_mail.png"
-                        WinPhone="Images/btn_mail.png" />
-                </Button.Image>-->
             </Button>
-            
-        
-        
-        
-        
+           
+       
             <Grid BackgroundColor="White" Padding="0,0" RowSpacing="1" ColumnSpacing="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="56"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
             
-                <Image x:Name="img_mail" Grid.Row="0" Grid.Column="0"
-                       BackgroundColor="#a8002f" Aspect="AspectFit"/>
+                <Image x:Name="img_mail" Source="btn_mail.png" Grid.Row="0" Grid.Column="0"
+                       BackgroundColor="#555555" Aspect="AspectFit"/>
                                                 
-                <Button x:Name="btnMessage2" Grid.Row="0" Grid.Column="1"  
+                <Button x:Name="btnMessage" Grid.Row="0" Grid.Column="1"  
                         Text="お知らせ リスト" TextColor="White"
                         BackgroundColor="#a8002f" BorderRadius="0">
                 </Button>
             
-                <Image x:Name="img_point" Grid.Row="1" Grid.Column="0" 
+                <Image x:Name="img_point" Source="btn_point.png" Grid.Row="1" Grid.Column="0" 
                        BackgroundColor="#a8002f" Aspect="AspectFit"/>
                                                 
-                <Button x:Name="btnpoint2" Grid.Row="1" Grid.Column="1"  
+                <Button x:Name="btnpoint" Grid.Row="1" Grid.Column="1"  
                         Text="マイポイント" TextColor="White"
                         BackgroundColor="#a8002f" BorderRadius="0">
                 </Button>
             
-                <Image x:Name="img_shopping" Grid.Row="2" Grid.Column="0" 
+                <Image x:Name="img_shopping"  Source="btn_Shopping.png" Grid.Row="2" Grid.Column="0" 
                        BackgroundColor="green" Aspect="AspectFit"/>
                                                 
-                <Button x:Name="btnshop2" Grid.Row="2" Grid.Column="1"  
+                <Button x:Name="btnOnlineShop" Grid.Row="2" Grid.Column="1"  
                         Text="オンラインショップ" TextColor="White"
                         BackgroundColor="#a8002f" BorderRadius="0">
                 </Button>
             
+            
+                <Image x:Name="img_ShopInfo"  Source="btn_Shop.png" Grid.Row="3" Grid.Column="0" 
+                       BackgroundColor="green" Aspect=" AspectFit"/>
+         
+                <Button x:Name="btnShopInfo" Grid.Row="3" Grid.Column="1" 
+                        Text="店舗情報" TextColor="White"
+                        BackgroundColor="#a8002f"  BorderRadius="0"> 
+                </Button>
+
+                <Image x:Name="img_Blog"  Source="btn_blog.png" Grid.Row="4" Grid.Column="0" 
+                       BackgroundColor="green" Aspect="AspectFit"/>
+         
+                <Button x:Name="btnBlog" Grid.Row="4" Grid.Column="1" 
+                        Text="スタッフブログ" TextColor="White"
+                        BackgroundColor="#a8002f"  BorderRadius="0"> 
+                </Button>
+
             
             </Grid>
            
