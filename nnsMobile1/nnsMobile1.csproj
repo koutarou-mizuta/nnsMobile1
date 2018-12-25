@@ -23,4 +23,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\btn_mail.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="WebPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

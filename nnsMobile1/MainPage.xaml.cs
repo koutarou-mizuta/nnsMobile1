@@ -27,7 +27,8 @@ namespace nnsMobile1
 
         void btnPoint_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            String strUrl = "http://mobile.fishing-try.com/mobile/s/sTop.aspx?adr=koutarou.mizuta@findtech.jp";
+            this.Navigation.PushModalAsync(new WebPage(strUrl));
         }
     }
 }

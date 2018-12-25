@@ -45,7 +45,7 @@
                            
             <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
                 <Image Source="btn_mail.png" />
-                <Button x:Name="btnMessage" Text="お知らせ リスト" TextColor="White"
+                <Button x:Name="btnMessage" Text="お知らせ リスト" TextColor="White" BackgroundColor="#a8002f"
                     HorizontalOptions="FillAndExpand" Clicked="btnMessage_Clicked">
                 
                 </Button>
@@ -53,15 +53,14 @@
         
             <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6">
                 <Image Source="btn_point.png" />
-
-                <Button x:Name="btnPoint" Text="マイポイント" TextColor="White"
+                <Button x:Name="btnPoint" Text="マイポイント" TextColor="White" BackgroundColor="#a8002f"
                     HorizontalOptions="FillAndExpand" Clicked="btnPoint_Clicked">
                 </Button>
             </StackLayout>
                                 
              <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
                 <Image Source="btn_Shopping.png" />
-                <Button x:Name="btnOnlineShop" Text="オンラインショップ" TextColor="White"
+                <Button x:Name="btnOnlineShop" Text="オンラインショップ" TextColor="White" BackgroundColor="#a8002f"
                     HorizontalOptions="FillAndExpand">
                 </Button>
             </StackLayout>
