@@ -16,6 +16,18 @@ namespace nnsMobile1
             //img_mail.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
             //img_point.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
             //img_shopping.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
+
+        }
+
+
+        void btnMessage_Clicked(object sender, System.EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        void btnPoint_Clicked(object sender, System.EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

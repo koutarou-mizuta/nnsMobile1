@@ -1,103 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:nnsMobile1" x:Class="nnsMobile1.MainPage">
         <StackLayout Padding="0" Spacing="1" >
-
-            <Grid BackgroundColor="CornflowerBlue">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+        
+        
+<!--        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    
+                    <Setter Property="HorizontalOptions" Value="Left" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+-->        
                 
-                <Image x:Name="imgLogo"
-                   Grid.Row="0" Grid.Column="0" BackgroundColor="CornflowerBlue" Margin="30,0,0,0"/>
-
-                <Label Text="ＮＮＳ モバイルサービス" TextColor="White"
-                    Grid.Row="0" Grid.Column="1"   
+        
+            <StackLayout  Orientation="Horizontal" BackgroundColor="CornflowerBlue" HeightRequest="40" Padding="4" Spacing="2">
+<!--                <Image Source="btn_Shop.png" />
+-->                
+            <Label Text="ＮＮＳ モバイルサービス" TextColor="White"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center" FontSize="Large"/>
-            </Grid>
-            
+                    HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+            </StackLayout>
+        
             <Label x:Name="lblKmfCd" Text="会員番号：0000000000"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center" FontSize="Medium" Margin="0,20,0,4"/>
+                    HorizontalOptions="Center" FontSize="Medium" Margin="0,20,0,0"/>
 
             <Image x:Name="imgBarCode" Source="barcode.jpg" 
                 WidthRequest="200" HeightRequest="60" Margin="0,0,0,20"/>
 
             <Button x:Name="btnToRegist" Text="登録はこちら" TextColor="White" HeightRequest="56"
-                BackgroundColor="DarkBlue" 
-                BorderRadius="20" Margin="6">
+                BackgroundColor="DarkBlue" ContentLayout="left,10"
+                BorderRadius="6" Margin="6">
+            
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource"
+                        iOS="btn_mail.png"
+                        Android="btn_mail.png"
+                        WinPhone="Images/btn_mail.png" />
+                </Button.Image>
+
             </Button>
-           
-       
-            <Grid BackgroundColor="White" Padding="0,0" RowSpacing="1" ColumnSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+          
+                           
+            <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
+                <Image Source="btn_mail.png" />
+                <Button x:Name="btnMessage" Text="お知らせ リスト" TextColor="White"
+                    HorizontalOptions="FillAndExpand" Clicked="btnMessage_Clicked">
                 
-            
-                <Image x:Name="img_mail" Source="btn_mail.png" Grid.Row="0" Grid.Column="0"
-                       BackgroundColor="#555555" Aspect="AspectFit"/>
-                                                
-                <Button x:Name="btnMessage" Grid.Row="0" Grid.Column="1"  
-                        Text="お知らせ リスト" TextColor="White"
-                        BackgroundColor="#a8002f" BorderRadius="0">
                 </Button>
-            
-                <Image x:Name="img_point" Source="btn_point.png" Grid.Row="1" Grid.Column="0" 
-                       BackgroundColor="#a8002f" Aspect="AspectFit"/>
-                                                
-                <Button x:Name="btnpoint" Grid.Row="1" Grid.Column="1"  
-                        Text="マイポイント" TextColor="White"
-                        BackgroundColor="#a8002f" BorderRadius="0">
-                </Button>
-            
-                <Image x:Name="img_shopping"  Source="btn_Shopping.png" Grid.Row="2" Grid.Column="0" 
-                       BackgroundColor="green" Aspect="AspectFit"/>
-                                                
-                <Button x:Name="btnOnlineShop" Grid.Row="2" Grid.Column="1"  
-                        Text="オンラインショップ" TextColor="White"
-                        BackgroundColor="#a8002f" BorderRadius="0">
-                </Button>
-            
-            
-                <Image x:Name="img_ShopInfo"  Source="btn_Shop.png" Grid.Row="3" Grid.Column="0" 
-                       BackgroundColor="green" Aspect=" AspectFit"/>
-         
-                <Button x:Name="btnShopInfo" Grid.Row="3" Grid.Column="1" 
-                        Text="店舗情報" TextColor="White"
-                        BackgroundColor="#a8002f"  BorderRadius="0"> 
-                </Button>
+            </StackLayout>
+        
+            <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6">
+                <Image Source="btn_point.png" />
 
-                <Image x:Name="img_Blog"  Source="btn_blog.png" Grid.Row="4" Grid.Column="0" 
-                       BackgroundColor="green" Aspect="AspectFit"/>
-         
-                <Button x:Name="btnBlog" Grid.Row="4" Grid.Column="1" 
-                        Text="スタッフブログ" TextColor="White"
-                        BackgroundColor="#a8002f"  BorderRadius="0"> 
+                <Button x:Name="btnPoint" Text="マイポイント" TextColor="White"
+                    HorizontalOptions="FillAndExpand" Clicked="btnPoint_Clicked">
                 </Button>
+            </StackLayout>
+                                
+             <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
+                <Image Source="btn_Shopping.png" />
+                <Button x:Name="btnOnlineShop" Text="オンラインショップ" TextColor="White"
+                    HorizontalOptions="FillAndExpand">
+                </Button>
+            </StackLayout>
+        
+            <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6">
+                <Image Source="btn_Shop.png" />
 
+                <Button x:Name="btnShopInfo" Text="店舗情報" TextColor="White"
+                    HorizontalOptions="FillAndExpand">
+                </Button>
+            </StackLayout>
+       
+            <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6">
+                <Image Source="btn_blog.png" />
+
+                <Button x:Name="btnBlog" Text="スタッフブログ" TextColor="White"
+                    BackgroundColor="blue" HorizontalOptions="FillAndExpand">
+                </Button>
+            </StackLayout>
+        
             
-            </Grid>
            
+            
+<!-- 
+         
         
         
         
-        
-        
-        
-        
-        
-<!--            <Button x:Name="btnMessage" Text="お知らせ リスト" TextColor="White" HeightRequest="56"
+        <Button x:Name="btnMessage1" Text="お知らせ リスト" TextColor="White" HeightRequest="56"
                     ContentLayout="Left"
                     BackgroundColor="#a8002f" 
                 BorderRadius="0" >
