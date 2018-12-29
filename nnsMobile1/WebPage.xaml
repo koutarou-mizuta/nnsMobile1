@@ -1,15 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="nnsMobile1.WebPage">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
 
-            <WebView x:Name="webView" VerticalOptions="FillAndExpand" />
+            <WebView x:Name="webView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
 
             <StackLayout Orientation="Horizontal" BindingContext="{x:Reference webView}" BackgroundColor="MediumBlue"  Padding="10, 0,0,0">
 
-                <Button x:Name="btnBack" Text="&lt;" IsEnabled="{Binding CanGoBack}" FontSize="Small" Clicked="BtnBack_Clicked"/>
+<!--                <Button x:Name="btnBack" Text="&lt;" IsEnabled="{Binding CanGoBack}" FontSize="Small" Clicked="BtnBack_Clicked"/>
+-->
+                    <Button x:Name="btnBack" Text="&lt;" FontSize="Small" Clicked="BtnBack_Clicked"/>
+ 
             </StackLayout>
 
         </StackLayout>

@@ -29,6 +29,7 @@ namespace nnsMobile1
         {
             String strUrl = "http://mobile.fishing-try.com/mobile/s/sTop.aspx?adr=koutarou.mizuta@findtech.jp";
             this.Navigation.PushModalAsync(new WebPage(strUrl));
+            // this.Navigation.PushAsync(new WebPage(strUrl));
         }
     }
 }

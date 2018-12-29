@@ -12,16 +12,38 @@ namespace nnsMobile1
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WebPage : ContentPage
 	{
-		public WebPage (string strUrl)
+        public WebPage()
+        {
+            InitializeComponent();
+            //String strUrl = "http://mobile.fishing-try.com/mobile/s/sTop.aspx?adr=koutarou.mizuta@findtech.jp";
+            //String strUrl = "https://www.yahoo.co.jp/";
+            // webView.Source = strUrl;
+
+        }
+
+        public WebPage (string strUrl) : this()
 		{
-			InitializeComponent ();
+			//InitializeComponent ();
 
             webView.Source = strUrl;
         }
 
         private void BtnBack_Clicked(object sender, EventArgs e)
-        {
-            webView.GoBack();
+        {        
+            if (webView.CanGoBack)
+            {
+                webView.GoBack();
+            }
+            else
+            {
+                this.Navigation.PopModalAsync();
+            }
+
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return base.OnBackButtonPressed();
+        }
+
     }
 }
