@@ -19,17 +19,21 @@ namespace nnsMobile1
 
         }
 
-
-        void btnMessage_Clicked(object sender, System.EventArgs e)
+        private void BtnMessage_Clicked(object sender, System.EventArgs e)
         {
             throw new NotImplementedException();
         }
 
-        void btnPoint_Clicked(object sender, System.EventArgs e)
+        void BtnPoint_Clicked(object sender, System.EventArgs e)
         {
             String strUrl = "http://mobile.fishing-try.com/mobile/s/sTop.aspx?adr=koutarou.mizuta@findtech.jp";
             this.Navigation.PushModalAsync(new WebPage(strUrl));
             // this.Navigation.PushAsync(new WebPage(strUrl));
+        }
+
+        private void BtnToRegist_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushModalAsync(new CallMailer());
         }
     }
 }

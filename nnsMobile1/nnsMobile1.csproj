@@ -24,6 +24,9 @@
     <EmbeddedResource Include="Images\btn_mail.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="CallMailer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="WebPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -31,7 +31,7 @@
 
             <Button x:Name="btnToRegist" Text="登録はこちら" TextColor="White" HeightRequest="56"
                 BackgroundColor="DarkBlue" ContentLayout="left,10"
-                BorderRadius="6" Margin="6">
+                BorderRadius="6" Margin="6" Clicked="BtnToRegist_Clicked">
             
                 <Button.Image>
                     <OnPlatform x:TypeArguments="FileImageSource"
@@ -46,7 +46,7 @@
             <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
                 <Image Source="btn_mail.png" />
                 <Button x:Name="btnMessage" Text="お知らせ リスト" TextColor="White" BackgroundColor="#a8002f"
-                    HorizontalOptions="FillAndExpand" Clicked="btnMessage_Clicked">
+                    HorizontalOptions="FillAndExpand" Clicked="BtnMessage_Clicked">
                 
                 </Button>
             </StackLayout>
@@ -54,7 +54,7 @@
             <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6">
                 <Image Source="btn_point.png" />
                 <Button x:Name="btnPoint" Text="マイポイント" TextColor="White" BackgroundColor="#a8002f"
-                    HorizontalOptions="FillAndExpand" Clicked="btnPoint_Clicked">
+                    HorizontalOptions="FillAndExpand" Clicked="BtnPoint_Clicked">
                 </Button>
             </StackLayout>
                                 
