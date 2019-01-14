@@ -26,7 +26,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center" FontSize="Medium" Margin="0,20,0,0"/>
 
-            <Image x:Name="imgBarCode" Source="barcode.jpg" 
+            <Image x:Name="imgBarCode" Source="barcode.jpg" IsVisible="False" 
                 WidthRequest="200" HeightRequest="60" Margin="0,0,0,20"/>
 
             <Button x:Name="btnToRegist" Text="登録はこちら" TextColor="White" HeightRequest="56"
@@ -61,7 +61,7 @@
              <StackLayout  Orientation="Horizontal" BackgroundColor="#a8002f" Padding="6" >
                 <Image Source="btn_Shopping.png" />
                 <Button x:Name="btnOnlineShop" Text="オンラインショップ" TextColor="White" BackgroundColor="#a8002f"
-                    HorizontalOptions="FillAndExpand">
+                    HorizontalOptions="FillAndExpand" Clicked="BtnOnlineShop_Clicked">
                 </Button>
             </StackLayout>
         
@@ -69,7 +69,7 @@
                 <Image Source="btn_Shop.png" />
 
                 <Button x:Name="btnShopInfo" Text="店舗情報" TextColor="White"
-                    HorizontalOptions="FillAndExpand">
+                    HorizontalOptions="FillAndExpand" Clicked="BtnShopInfo_Clicked">
                 </Button>
             </StackLayout>
        
@@ -77,7 +77,7 @@
                 <Image Source="btn_blog.png" />
 
                 <Button x:Name="btnBlog" Text="スタッフブログ" TextColor="White"
-                    BackgroundColor="blue" HorizontalOptions="FillAndExpand">
+                    BackgroundColor="blue" HorizontalOptions="FillAndExpand" Clicked="BtnBlog_Clicked">
                 </Button>
             </StackLayout>
         

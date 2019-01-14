@@ -20,12 +20,14 @@ namespace nnsMobile1
         private void BtnMail_Clicked(object sender, EventArgs e)
         {
             string errMsg = String.Empty;
-            //DependencyService.Get<IMailService>().StartMailer("タイトル", "本文", null, null, null, this.txtFilePath, ref errMsg);
-            DependencyService.Get<IMailService>().StartMailer("タイトル", "本文", null, null, null, null, ref errMsg);
+            string[] to_mailaddr = { "welcome@findtech.jp" };
+
+            //DependencyService.Get<IMailService>().StartMailer("タイトル", "本文", to, cc, bcc, this.txtFilePath, ref errMsg);
+            DependencyService.Get<IMailService>().StartMailer("空メール送信", "このまま送信して下さい", to_mailaddr, null, null, null, ref errMsg);
             if (String.IsNullOrEmpty(errMsg))
             {
                 this.DisplayAlert("メール送信完了",
-                                        "メール送信完了しました。" + System.Environment.NewLine +
+                                        "自動返信メールより登録をして下さい。" + System.Environment.NewLine +
                                         errMsg, "OK");
             }
             else
@@ -36,6 +38,8 @@ namespace nnsMobile1
 
             }
             this.Navigation.PopModalAsync();
+
+
             //var intent = new Intent();
             //intent.SetAction(Intent.ActionSend);
             //intent.SetType("text/plain");

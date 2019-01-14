@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="nnsMobile1.Regist">
+    <ContentPage.Content>
+        <StackLayout Padding="0" BackgroundColor="White">
+            <StackLayout Orientation="Horizontal" BackgroundColor="CornflowerBlue" Padding="8">
+
+                <Image x:Name="imgLogo"
+                   Margin="30,0,0,0"/>
+
+                <Label Text="ＮＮＳ モバイルサービス" TextColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" FontSize="Large"/>
+            </StackLayout>
+
+            <ScrollView >
+                
+                <StackLayout Margin="15" Spacing="5" BackgroundColor="WhiteSmoke">
+
+                    <Label Text="仮の会員番号"
+                        BackgroundColor="MistyRose"
+                        FontSize="Medium"
+                        VerticalOptions ="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <Label x:Name="lblKmfCd" Text="0000000000"
+                        FontSize="Medium"
+                        VerticalOptions ="Start"
+                        HorizontalOptions="Start" />
+
+
+                    <Label Text="メールアドレス"
+                        BackgroundColor="MistyRose"
+                        FontSize="Medium"
+                        VerticalOptions ="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <Label x:Name="lblMailAddr" Text=""
+                        FontSize="Medium"
+                        VerticalOptions ="Start"
+                        HorizontalOptions="Start" />
+
+                    <!--
+                     <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="最初のSPAN" />
+                                <Span Text="　２番目のSPAN" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    -->
+
+                    <Label Text="氏名"
+                        BackgroundColor="MistyRose"
+                        FontSize="Medium"
+                        VerticalOptions ="FillAndExpand"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="姓を入力"
+                            x:Name="FirstName"
+                            WidthRequest="100"
+                            FontSize="Medium"/>
+
+                        <Entry Placeholder="名を入力"
+                            x:Name="LastName"
+                            WidthRequest="100"
+                            FontSize="Medium"/>
+                    </StackLayout>
+
+                    <Label Text="電話番号"
+                        BackgroundColor="MistyRose"
+                        FontSize="Medium"
+                        VerticalOptions ="Start"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="ﾊｲﾌﾝ - 付きで入力"
+                        x:Name="Tel"
+                        Keyboard="Telephone"
+                        FontSize="Medium"/>
+
+                    <Label Text="パスワード"
+                        BackgroundColor="MistyRose"
+                        FontSize="Medium"
+                        VerticalOptions ="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="英数 6文字以上"
+                        x:Name="PassWord"
+                        Keyboard="Text"
+                        FontSize="Medium"/>
+
+                    <ActivityIndicator x:Name="Indicator"
+                    IsRunning="False">
+                        <ActivityIndicator.Color>
+                            <OnPlatform x:TypeArguments="Color"
+                        iOS="Orange"
+                        Android="Orange"
+                        WinPhone="Accent" />
+                        </ActivityIndicator.Color>
+                    </ActivityIndicator>
+
+
+                    <Button x:Name="btnRegist" Text="同意して 登録" Margin="0,0,10,0"
+                        BackgroundColor="#a8002f" 
+                        BorderRadius="0"  Clicked="BtnRegist_Clicked">
+                    </Button>
+
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -14,11 +14,11 @@ namespace nnsMobile1
         const string iosKey = "625dde21-70d3-4c15-ab18-e9cf4ded77bc";
         const string androidKey = "fcfe18e6-3012-4d6f-bd98-ff3b25b69d82";
 
-        public App()
+        public App(String mailaddr)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage(mailaddr);
             //MainPage = new NavigationPage(new MainPage());
         }
 
