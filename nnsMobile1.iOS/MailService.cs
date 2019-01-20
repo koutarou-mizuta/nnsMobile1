@@ -6,12 +6,12 @@
 //using Foundation;
 //using UIKit;
 
-using Foundation;
+//using Foundation;
 using UIKit;
 using MessageUI;
 using Xamarin.Forms;
-//using AppName.iOS.Services;
-//using AppName.Services;
+//using nnsMobile1.iOS.Services;
+//using nnsMobile1.Services;
 
 [assembly: Dependency(typeof(nnsMobile1.iOS.MailService))]
 
