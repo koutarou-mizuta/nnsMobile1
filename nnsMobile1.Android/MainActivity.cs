@@ -32,48 +32,25 @@ namespace nnsMobile1.Droid
             if (Intent.ActionView.Equals(intent.Action))
             {
                 var uri = intent.Data;
-                // uri: myapp://example.jp/comment/view/801
-
+                // uri: myapp://jp.findtech/comment/view/801
+                // uri: myapp://jp.findtech?adr=k.mizu12@gmail.com
                 if (uri != null)
                 {
-                    mailaddr = "k.mizu12@gmail.com";
-
+                    mailaddr = uri.GetQueryParameter("adr");
 
                     // 渡ってきたURLをスラッシュ区切りでリストにして, それを表示させて確認
                     //uri.PathSegments
                     //    .ToList()
                     //    .ForEach(Console.WriteLine);
+
+                    // "hogeapp://main?param1=aabbcc&hoge=fuga&xyz=1000" で起動されていれば
+                    // ここでは "aabbcc" という文字列が取得できる。
+                    //string param1 = uri.GetQueryParameter("param1");
                 }
             }
-
             LoadApplication(new App(mailaddr));
 
-
         }
-
-        //protected override void OnResume()
-        //{
-        //    base.OnResume();
-
-        //    var intent = this.Intent;
-
-        //    if (Intent.ActionView.Equals(intent.Action))
-        //    {
-        //        var uri = intent.Data;
-        //        // uri: myapp://example.jp/comment/view/801
-
-        //        if (uri != null)
-        //        {
-
-
-
-        //            // 渡ってきたURLをスラッシュ区切りでリストにして, それを表示させて確認
-        //            //uri.PathSegments
-        //            //    .ToList()
-        //            //    .ForEach(Console.WriteLine);
-        //        }
-        //    }
-        //}
 
 
     }

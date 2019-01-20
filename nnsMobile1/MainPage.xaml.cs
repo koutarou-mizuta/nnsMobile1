@@ -17,12 +17,6 @@ namespace nnsMobile1
             //img_point.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
             //img_shopping.Source = ImageSource.FromResource("nnsMobile1.Images.btn_mail.png");
 
-            if (mailaddr != null)
-            {
-                this.Navigation.PushModalAsync(new Regist(mailaddr));
-            }
-
-
             string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string fileName = fileName = path + "/kmfccd.txt";
             string cd = "";
@@ -48,6 +42,11 @@ namespace nnsMobile1
                 this.lblKmfCd.Text = "仮の会員番号 " + cd;
             }
 
+            if (mailaddr != null)
+            {
+                this.Navigation.PushModalAsync(new Regist(mailaddr));
+            }
+
         }
 
         private void BtnToRegist_Clicked(object sender, EventArgs e)
@@ -57,7 +56,9 @@ namespace nnsMobile1
 
         private void BtnMessage_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            String strUrl = "http://mobile.fishing-try.com/mobile/s/sTop.aspx?adr=koutarou.mizuta@findtech.jp";
+            this.Navigation.PushAsync(new WebPage(strUrl));
         }
 
         void BtnPoint_Clicked(object sender, System.EventArgs e)

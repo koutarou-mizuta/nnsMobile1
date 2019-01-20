@@ -37,7 +37,7 @@ namespace nnsMobile1
                                         errMsg, "OK");
 
             }
-            this.Navigation.PopModalAsync();
+            this.Navigation.PopAsync();
 
 
             //var intent = new Intent();
