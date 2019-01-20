@@ -18,8 +18,8 @@ namespace nnsMobile1
         {
             InitializeComponent();
 
-            MainPage = new MainPage(mailaddr);
-            //MainPage = new NavigationPage(new MainPage());
+            //MainPage = new MainPage(mailaddr);  Modalではiosでメーラーが起動しないので
+            MainPage = new NavigationPage(new MainPage(mailaddr));
         }
 
         protected override void OnStart()

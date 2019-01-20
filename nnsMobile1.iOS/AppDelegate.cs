@@ -20,6 +20,7 @@ namespace nnsMobile1.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
+        // 通常の起動
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
@@ -29,10 +30,10 @@ namespace nnsMobile1.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        // urlから起動
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-
 
             String mailaddr = url.Query;
             LoadApplication(new App(mailaddr));

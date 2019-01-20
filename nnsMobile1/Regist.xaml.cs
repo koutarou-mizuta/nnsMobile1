@@ -18,7 +18,7 @@ namespace nnsMobile1
 		{
 			InitializeComponent ();
 
-            if (mailaddr != null && mailaddr.IndexOf('@') > 0 )
+            if (mailaddr != null)
             {
                 this.lblMailAddr.Text = mailaddr;
             }
