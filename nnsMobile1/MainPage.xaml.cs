@@ -19,7 +19,7 @@ namespace nnsMobile1
 
             if (mailaddr != null)
             {
-                this.Navigation.PushModalAsync(new Regist(mailaddr));
+                this.Navigation.PushAsync(new Regist(mailaddr));
             }
 
 
@@ -52,7 +52,7 @@ namespace nnsMobile1
 
         private void BtnToRegist_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushModalAsync(new CallMailer());
+            this.Navigation.PushAsync(new CallMailer());
         }
 
         private void BtnMessage_Clicked(object sender, System.EventArgs e)
@@ -69,6 +69,8 @@ namespace nnsMobile1
 
         private void BtnOnlineShop_Clicked(object sender, EventArgs e)
         {
+            String strUrl = "http://mobile.fishing-try.com/mobile/";
+            this.Navigation.PushModalAsync(new WebPage(strUrl));
 
         }
 

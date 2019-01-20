@@ -23,9 +23,22 @@ namespace nnsMobile1.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+            LoadApplication(new App(null));
 
             return base.FinishedLaunching(app, options);
         }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init();
+
+
+            String mailaddr = null; //"k.mizu12@gmail.com"; //
+            LoadApplication(new App(mailaddr));
+
+            return true;  //base.OpenUrl(app, url, options);
+        }
+
     }
 }
