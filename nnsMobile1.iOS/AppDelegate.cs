@@ -34,7 +34,7 @@ namespace nnsMobile1.iOS
             global::Xamarin.Forms.Forms.Init();
 
 
-            String mailaddr = null; //"k.mizu12@gmail.com"; //
+            String mailaddr = url.Query;
             LoadApplication(new App(mailaddr));
 
             return true;  //base.OpenUrl(app, url, options);
